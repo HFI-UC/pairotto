@@ -1,7 +1,9 @@
+import type { Message } from "wechaty";
+
 export type CommandHandler = (payload: {
   args: string[];
   raw: string;
-  reply: (text: string) => Promise<unknown> | void;
+  message: Message;
 }) => Promise<unknown> | void;
 
 export interface CommandDefinition {

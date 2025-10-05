@@ -5,14 +5,15 @@ import { chat } from "./prompt.js";
 registerCommand({
 	name: "chat",
 	description: "Chat with the AI model",
-	handler: async ({ reply, args }) => {
+		handler: async ({ message, args }) => {
 		logger.debug("AI module received command with args:", args);
-		const response = await chat(args.join(" "));
+			const userId = message.talker().id || message.talker().name();
+			const response = await chat(args.join(" "), userId);
 		logger.debug("AI module response:", response);
 		if (response === "") {
-			await reply("Error: Unable to get response from AI model.");
+			await message.say("Error: Unable to get response from AI model.");
 			return;
 		}
-		await reply(response);
+		await message.say(response);
 	},
 });

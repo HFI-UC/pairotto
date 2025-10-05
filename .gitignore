@@ -2,3 +2,4 @@ node_modules
 dist
 .env
 logs
+pairotto.memory-card.json

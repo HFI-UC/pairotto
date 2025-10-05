@@ -17,8 +17,6 @@ export async function loadModules() {
         logger.warn(`Modules directory not found: ${modulesDir}`);
         return;
     }
-    logger.debug(`Found ${entries.length} entries in modules directory.`);
-
     for (const dirent of entries) {
         if (!dirent.isDirectory()) continue;
         const spec = `./${dirent.name}/index.js`; // 相对当前模块，不需要 pathToFileURL / fileURLToPath
