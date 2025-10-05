@@ -1,0 +1,28 @@
+{
+  "name": "pairotto",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "dev": "tsc-watch --onSuccess \"node --enable-source-maps dist/index.js\""
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.6.2",
+    "@types/qrcode-terminal": "^0.12.2",
+    "tsc-watch": "^7.2.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.78",
+    "@langchain/google-genai": "^0.2.18",
+    "@wechatferry/puppet": "^0.0.26",
+    "consola": "^3.4.2",
+    "dotenv": "^17.2.3",
+    "qrcode-terminal": "^0.12.0",
+    "wechaty": "^1.20.2",
+    "zod": "^4.1.11"
+  }
+}
