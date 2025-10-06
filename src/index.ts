@@ -1,5 +1,5 @@
 import qrcodeTerminal from "qrcode-terminal";
-import { WechatyBuilder, type Message, log as WechatyLog } from "wechaty";
+import { WechatyBuilder, type Message } from "wechaty";
 import { COMMAND_PREFIX } from "./config.js";
 import { logger } from "./logger.js";
 import { loadModules } from "./modules/index.js";
